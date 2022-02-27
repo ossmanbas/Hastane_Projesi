@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Hastane_Projesi
 {
-    public partial class Form1 : Form
+    public partial class AnaGiris : Form
     {
-        public Form1()
+        public AnaGiris()
         {
             InitializeComponent();
         }
