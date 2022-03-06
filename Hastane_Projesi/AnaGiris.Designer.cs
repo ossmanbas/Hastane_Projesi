@@ -51,6 +51,7 @@ namespace Hastane_Projesi
             this.button1.Size = new System.Drawing.Size(172, 90);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -62,6 +63,7 @@ namespace Hastane_Projesi
             this.button2.Size = new System.Drawing.Size(172, 90);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -73,6 +75,7 @@ namespace Hastane_Projesi
             this.button3.Size = new System.Drawing.Size(172, 90);
             this.button3.TabIndex = 2;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // lblHasta
             // 
@@ -129,6 +132,7 @@ namespace Hastane_Projesi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(650, 359);
             this.Controls.Add(this.pictureBox1);
@@ -139,6 +143,8 @@ namespace Hastane_Projesi
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "AnaGiris";
             this.Text = "Sea Green Hospital";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

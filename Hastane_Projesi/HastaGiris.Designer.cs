@@ -29,6 +29,7 @@ namespace Hastane_Projesi
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HastaGiris));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -83,6 +84,7 @@ namespace Hastane_Projesi
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(90, 23);
             this.txtSifre.TabIndex = 4;
+            this.txtSifre.UseSystemPasswordChar = true;
             // 
             // btnGiris
             // 
@@ -93,6 +95,7 @@ namespace Hastane_Projesi
             this.btnGiris.TabIndex = 5;
             this.btnGiris.Text = "Giriş Yap";
             this.btnGiris.UseVisualStyleBackColor = true;
+            this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
             // lnkUye
             // 
@@ -104,9 +107,11 @@ namespace Hastane_Projesi
             this.lnkUye.TabIndex = 6;
             this.lnkUye.TabStop = true;
             this.lnkUye.Text = "Üye Ol";
+            this.lnkUye.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkUye_LinkClicked);
             // 
             // HastaGiris
             // 
+            this.AcceptButton = this.btnGiris;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSpringGreen;
@@ -118,6 +123,7 @@ namespace Hastane_Projesi
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HastaGiris";
             this.Text = "HastaGiris";
             this.ResumeLayout(false);

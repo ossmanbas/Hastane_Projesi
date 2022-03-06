@@ -17,5 +17,25 @@ namespace Hastane_Projesi
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HastaGiris hg = new();
+            hg.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DoktorGiris dg = new();
+            dg.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SekreterGiris sg = new();
+            sg.Show();
+            this.Hide();
+        }
     }
 }

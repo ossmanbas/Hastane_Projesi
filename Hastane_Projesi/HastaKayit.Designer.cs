@@ -29,6 +29,7 @@ namespace Hastane_Projesi
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HastaKayit));
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.mskTC = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,7 +51,7 @@ namespace Hastane_Projesi
             this.txtSifre.Location = new System.Drawing.Point(160, 170);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(92, 23);
-            this.txtSifre.TabIndex = 8;
+            this.txtSifre.TabIndex = 5;
             // 
             // mskTC
             // 
@@ -58,7 +59,7 @@ namespace Hastane_Projesi
             this.mskTC.Mask = "00000000000";
             this.mskTC.Name = "mskTC";
             this.mskTC.Size = new System.Drawing.Size(91, 23);
-            this.mskTC.TabIndex = 7;
+            this.mskTC.TabIndex = 3;
             this.mskTC.ValidatingType = typeof(int);
             // 
             // label4
@@ -86,7 +87,7 @@ namespace Hastane_Projesi
             this.txtSoyad.Location = new System.Drawing.Point(161, 49);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(91, 23);
-            this.txtSoyad.TabIndex = 10;
+            this.txtSoyad.TabIndex = 2;
             // 
             // label1
             // 
@@ -103,7 +104,7 @@ namespace Hastane_Projesi
             this.txtAd.Location = new System.Drawing.Point(161, 9);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(91, 23);
-            this.txtAd.TabIndex = 12;
+            this.txtAd.TabIndex = 1;
             // 
             // label2
             // 
@@ -121,7 +122,7 @@ namespace Hastane_Projesi
             this.mskTel.Mask = "(999) 000-0000";
             this.mskTel.Name = "mskTel";
             this.mskTel.Size = new System.Drawing.Size(91, 23);
-            this.mskTel.TabIndex = 14;
+            this.mskTel.TabIndex = 4;
             // 
             // label3
             // 
@@ -149,7 +150,7 @@ namespace Hastane_Projesi
             this.radioErkek.Location = new System.Drawing.Point(160, 212);
             this.radioErkek.Name = "radioErkek";
             this.radioErkek.Size = new System.Drawing.Size(53, 19);
-            this.radioErkek.TabIndex = 16;
+            this.radioErkek.TabIndex = 6;
             this.radioErkek.TabStop = true;
             this.radioErkek.Text = "Erkek";
             this.radioErkek.UseVisualStyleBackColor = true;
@@ -160,7 +161,7 @@ namespace Hastane_Projesi
             this.radioKadin.Location = new System.Drawing.Point(209, 212);
             this.radioKadin.Name = "radioKadin";
             this.radioKadin.Size = new System.Drawing.Size(55, 19);
-            this.radioKadin.TabIndex = 17;
+            this.radioKadin.TabIndex = 7;
             this.radioKadin.TabStop = true;
             this.radioKadin.Text = "Kadın";
             this.radioKadin.UseVisualStyleBackColor = true;
@@ -172,14 +173,17 @@ namespace Hastane_Projesi
             this.btnKayit.Location = new System.Drawing.Point(105, 241);
             this.btnKayit.Name = "btnKayit";
             this.btnKayit.Size = new System.Drawing.Size(108, 41);
-            this.btnKayit.TabIndex = 18;
+            this.btnKayit.TabIndex = 8;
             this.btnKayit.Text = "KAYIT YAP";
             this.btnKayit.UseVisualStyleBackColor = false;
+            this.btnKayit.Click += new System.EventHandler(this.btnKayit_Click);
             // 
             // HastaKayit
             // 
+            this.AcceptButton = this.btnKayit;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightCoral;
             this.ClientSize = new System.Drawing.Size(322, 290);
             this.Controls.Add(this.btnKayit);
@@ -196,8 +200,10 @@ namespace Hastane_Projesi
             this.Controls.Add(this.mskTC);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "HastaKayit";
-            this.Text = "HastaKayit";
+            this.Text = "Hasta Kayit";
             this.ResumeLayout(false);
             this.PerformLayout();
 
