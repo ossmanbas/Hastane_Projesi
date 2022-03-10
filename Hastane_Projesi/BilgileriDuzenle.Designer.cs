@@ -30,8 +30,6 @@ namespace Hastane_Projesi
         private void InitializeComponent()
         {
             this.btnKayit = new System.Windows.Forms.Button();
-            this.radioKadin = new System.Windows.Forms.RadioButton();
-            this.radioErkek = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.mskTel = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,6 +41,7 @@ namespace Hastane_Projesi
             this.mskTC = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.cmbCinsiyet = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnKayit
@@ -55,28 +54,7 @@ namespace Hastane_Projesi
             this.btnKayit.TabIndex = 32;
             this.btnKayit.Text = "KAYIT YAP";
             this.btnKayit.UseVisualStyleBackColor = false;
-            // 
-            // radioKadin
-            // 
-            this.radioKadin.AutoSize = true;
-            this.radioKadin.Location = new System.Drawing.Point(209, 234);
-            this.radioKadin.Name = "radioKadin";
-            this.radioKadin.Size = new System.Drawing.Size(55, 19);
-            this.radioKadin.TabIndex = 31;
-            this.radioKadin.TabStop = true;
-            this.radioKadin.Text = "Kadın";
-            this.radioKadin.UseVisualStyleBackColor = true;
-            // 
-            // radioErkek
-            // 
-            this.radioErkek.AutoSize = true;
-            this.radioErkek.Location = new System.Drawing.Point(160, 234);
-            this.radioErkek.Name = "radioErkek";
-            this.radioErkek.Size = new System.Drawing.Size(53, 19);
-            this.radioErkek.TabIndex = 30;
-            this.radioErkek.TabStop = true;
-            this.radioErkek.Text = "Erkek";
-            this.radioErkek.UseVisualStyleBackColor = true;
+            this.btnKayit.Click += new System.EventHandler(this.btnKayit_Click);
             // 
             // label6
             // 
@@ -94,7 +72,7 @@ namespace Hastane_Projesi
             this.mskTel.Mask = "(999) 000-0000";
             this.mskTel.Name = "mskTel";
             this.mskTel.Size = new System.Drawing.Size(91, 23);
-            this.mskTel.TabIndex = 28;
+            this.mskTel.TabIndex = 4;
             // 
             // label3
             // 
@@ -111,7 +89,7 @@ namespace Hastane_Projesi
             this.txtAd.Location = new System.Drawing.Point(161, 31);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(91, 23);
-            this.txtAd.TabIndex = 26;
+            this.txtAd.TabIndex = 1;
             // 
             // label2
             // 
@@ -128,7 +106,7 @@ namespace Hastane_Projesi
             this.txtSoyad.Location = new System.Drawing.Point(161, 71);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(91, 23);
-            this.txtSoyad.TabIndex = 24;
+            this.txtSoyad.TabIndex = 2;
             // 
             // label1
             // 
@@ -153,7 +131,7 @@ namespace Hastane_Projesi
             this.mskTC.Mask = "00000000000";
             this.mskTC.Name = "mskTC";
             this.mskTC.Size = new System.Drawing.Size(91, 23);
-            this.mskTC.TabIndex = 21;
+            this.mskTC.TabIndex = 3;
             this.mskTC.ValidatingType = typeof(int);
             // 
             // label4
@@ -176,15 +154,23 @@ namespace Hastane_Projesi
             this.label5.TabIndex = 19;
             this.label5.Text = "TC Kimlik No :";
             // 
+            // cmbCinsiyet
+            // 
+            this.cmbCinsiyet.FormattingEnabled = true;
+            this.cmbCinsiyet.Location = new System.Drawing.Point(160, 228);
+            this.cmbCinsiyet.Name = "cmbCinsiyet";
+            this.cmbCinsiyet.Size = new System.Drawing.Size(92, 23);
+            this.cmbCinsiyet.TabIndex = 33;
+            // 
             // BilgileriDuzenle
             // 
+            this.AcceptButton = this.btnKayit;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(275, 311);
+            this.Controls.Add(this.cmbCinsiyet);
             this.Controls.Add(this.btnKayit);
-            this.Controls.Add(this.radioKadin);
-            this.Controls.Add(this.radioErkek);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.mskTel);
             this.Controls.Add(this.label3);
@@ -198,6 +184,7 @@ namespace Hastane_Projesi
             this.Controls.Add(this.label5);
             this.Name = "BilgileriDuzenle";
             this.Text = "BilgileriDuzenle";
+            this.Load += new System.EventHandler(this.BilgileriDuzenle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +206,6 @@ namespace Hastane_Projesi
         private System.Windows.Forms.MaskedTextBox mskTC;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cmbCinsiyet;
     }
 }

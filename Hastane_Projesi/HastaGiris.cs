@@ -36,6 +36,7 @@ namespace Hastane_Projesi
             if (dr.Read())
             {
                 HastaDetay fr = new();
+                fr.tc = mskTC.Text;
                 fr.Show();
                 this.Hide();
             }
