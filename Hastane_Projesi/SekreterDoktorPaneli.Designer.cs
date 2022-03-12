@@ -169,6 +169,7 @@ namespace Hastane_Projesi
             this.btnSil.TabIndex = 40;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnGuncelle
             // 
@@ -180,6 +181,7 @@ namespace Hastane_Projesi
             this.btnGuncelle.TabIndex = 41;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // SekreterDoktorPaneli
             // 

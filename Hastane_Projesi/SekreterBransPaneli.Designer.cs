@@ -50,6 +50,7 @@ namespace Hastane_Projesi
             this.btnGuncelle.TabIndex = 55;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnSil
             // 
@@ -61,6 +62,7 @@ namespace Hastane_Projesi
             this.btnSil.TabIndex = 54;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnEkle
             // 
@@ -73,6 +75,7 @@ namespace Hastane_Projesi
             this.btnEkle.TabIndex = 53;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // dataGridView1
             // 
@@ -82,6 +85,7 @@ namespace Hastane_Projesi
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(255, 207);
             this.dataGridView1.TabIndex = 52;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // txtId
             // 
@@ -132,6 +136,7 @@ namespace Hastane_Projesi
             this.Controls.Add(this.label1);
             this.Name = "SekreterBransPaneli";
             this.Text = "SekreterBransPaneli";
+            this.Load += new System.EventHandler(this.SekreterBransPaneli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

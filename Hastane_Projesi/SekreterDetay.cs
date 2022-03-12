@@ -98,5 +98,18 @@ namespace Hastane_Projesi
             fr.Show();
            
         }
+
+        private void btnBransPaneli_Click(object sender, EventArgs e)
+        {
+            SekreterBransPaneli sbp = new();
+            sbp.Show();
+        }
+
+        private void btnRandevuListele_Click(object sender, EventArgs e)
+        {
+            RandevuListesi rl = new();
+            rl.Show();
+            this.Hide();
+        }
     }
 }

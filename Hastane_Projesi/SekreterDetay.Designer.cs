@@ -389,6 +389,7 @@ namespace Hastane_Projesi
             this.btnBransPaneli.TabIndex = 38;
             this.btnBransPaneli.Text = "Branş Paneli";
             this.btnBransPaneli.UseVisualStyleBackColor = true;
+            this.btnBransPaneli.Click += new System.EventHandler(this.btnBransPaneli_Click);
             // 
             // btnRandevuListele
             // 
@@ -398,6 +399,7 @@ namespace Hastane_Projesi
             this.btnRandevuListele.TabIndex = 37;
             this.btnRandevuListele.Text = "Randevu Liste";
             this.btnRandevuListele.UseVisualStyleBackColor = true;
+            this.btnRandevuListele.Click += new System.EventHandler(this.btnRandevuListele_Click);
             // 
             // btnDokPaneli
             // 
