@@ -46,6 +46,7 @@ namespace Hastane_Projesi
             this.btnGiris.TabIndex = 18;
             this.btnGiris.Text = "Giriş Yap";
             this.btnGiris.UseVisualStyleBackColor = true;
+            this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
             // txtSifre
             // 
@@ -53,6 +54,8 @@ namespace Hastane_Projesi
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(90, 23);
             this.txtSifre.TabIndex = 17;
+            this.txtSifre.Text = "1";
+            this.txtSifre.UseSystemPasswordChar = true;
             // 
             // mskTC
             // 
@@ -61,6 +64,7 @@ namespace Hastane_Projesi
             this.mskTC.Name = "mskTC";
             this.mskTC.Size = new System.Drawing.Size(91, 23);
             this.mskTC.TabIndex = 16;
+            this.mskTC.Text = "11111111111";
             this.mskTC.ValidatingType = typeof(int);
             // 
             // label3
@@ -95,6 +99,7 @@ namespace Hastane_Projesi
             // 
             // SekreterGiris
             // 
+            this.AcceptButton = this.btnGiris;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;

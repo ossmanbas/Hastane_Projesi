@@ -193,8 +193,6 @@ namespace Hastane_Projesi
         #endregion
 
         private System.Windows.Forms.Button btnKayit;
-        private System.Windows.Forms.RadioButton radioKadin;
-        private System.Windows.Forms.RadioButton radioErkek;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MaskedTextBox mskTel;
         private System.Windows.Forms.Label label3;

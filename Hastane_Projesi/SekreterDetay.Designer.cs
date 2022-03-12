@@ -36,37 +36,37 @@ namespace Hastane_Projesi
             this.label5 = new System.Windows.Forms.Label();
             this.grpRandevuDetay = new System.Windows.Forms.GroupBox();
             this.rchDuyuru = new System.Windows.Forms.RichTextBox();
-            this.grpRandevu = new System.Windows.Forms.GroupBox();
             this.btnDuyuru = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.grpRandevu = new System.Windows.Forms.GroupBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.btnKaydet = new System.Windows.Forms.Button();
+            this.chkDurum = new System.Windows.Forms.CheckBox();
+            this.btnGuncelle = new System.Windows.Forms.Button();
+            this.mskTc = new System.Windows.Forms.MaskedTextBox();
+            this.cmbDoktor = new System.Windows.Forms.ComboBox();
+            this.cmbPoliklinik = new System.Windows.Forms.ComboBox();
+            this.mskSaat = new System.Windows.Forms.MaskedTextBox();
+            this.mskTarih = new System.Windows.Forms.MaskedTextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.mskTarih = new System.Windows.Forms.MaskedTextBox();
-            this.mskSaat = new System.Windows.Forms.MaskedTextBox();
-            this.cmbPoliklinik = new System.Windows.Forms.ComboBox();
-            this.cmbDoktor = new System.Windows.Forms.ComboBox();
-            this.mskTc = new System.Windows.Forms.MaskedTextBox();
-            this.chkDurum = new System.Windows.Forms.CheckBox();
-            this.btnKaydet = new System.Windows.Forms.Button();
-            this.btnGuncelle = new System.Windows.Forms.Button();
-            this.txtId = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvBrans = new System.Windows.Forms.DataGridView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvDoktor = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnBransPaneli = new System.Windows.Forms.Button();
             this.btnRandevuListele = new System.Windows.Forms.Button();
             this.btnDokPaneli = new System.Windows.Forms.Button();
-            this.btnBransPaneli = new System.Windows.Forms.Button();
             this.grpSekreterBilgi.SuspendLayout();
             this.grpRandevuDetay.SuspendLayout();
             this.grpRandevu.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBrans)).BeginInit();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoktor)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -145,6 +145,16 @@ namespace Hastane_Projesi
             this.rchDuyuru.TabIndex = 0;
             this.rchDuyuru.Text = "";
             // 
+            // btnDuyuru
+            // 
+            this.btnDuyuru.Location = new System.Drawing.Point(6, 93);
+            this.btnDuyuru.Name = "btnDuyuru";
+            this.btnDuyuru.Size = new System.Drawing.Size(300, 36);
+            this.btnDuyuru.TabIndex = 2;
+            this.btnDuyuru.Text = "Oluştur";
+            this.btnDuyuru.UseVisualStyleBackColor = true;
+            this.btnDuyuru.Click += new System.EventHandler(this.btnDuyuru_Click);
+            // 
             // grpRandevu
             // 
             this.grpRandevu.Controls.Add(this.txtId);
@@ -170,36 +180,107 @@ namespace Hastane_Projesi
             this.grpRandevu.TabStop = false;
             this.grpRandevu.Text = "Randevu Paneli";
             // 
-            // btnDuyuru
+            // txtId
             // 
-            this.btnDuyuru.Location = new System.Drawing.Point(6, 93);
-            this.btnDuyuru.Name = "btnDuyuru";
-            this.btnDuyuru.Size = new System.Drawing.Size(300, 36);
-            this.btnDuyuru.TabIndex = 2;
-            this.btnDuyuru.Text = "Oluştur";
-            this.btnDuyuru.UseVisualStyleBackColor = true;
+            this.txtId.Location = new System.Drawing.Point(160, 31);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 28);
+            this.txtId.TabIndex = 35;
             // 
-            // label3
+            // btnKaydet
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(81, 70);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 25);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "Tarih :";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btnKaydet.Location = new System.Drawing.Point(149, 309);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(137, 36);
+            this.btnKaydet.TabIndex = 5;
+            this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
-            // label6
+            // chkDurum
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(110, 31);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 25);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "ID :";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.chkDurum.AutoSize = true;
+            this.chkDurum.Location = new System.Drawing.Point(160, 278);
+            this.chkDurum.Name = "chkDurum";
+            this.chkDurum.Size = new System.Drawing.Size(84, 27);
+            this.chkDurum.TabIndex = 34;
+            this.chkDurum.Text = "Durum";
+            this.chkDurum.UseVisualStyleBackColor = true;
+            // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Location = new System.Drawing.Point(6, 309);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(137, 36);
+            this.btnGuncelle.TabIndex = 4;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = true;
+            // 
+            // mskTc
+            // 
+            this.mskTc.Location = new System.Drawing.Point(160, 228);
+            this.mskTc.Mask = "00000000000";
+            this.mskTc.Name = "mskTc";
+            this.mskTc.Size = new System.Drawing.Size(100, 28);
+            this.mskTc.TabIndex = 33;
+            this.mskTc.ValidatingType = typeof(int);
+            // 
+            // cmbDoktor
+            // 
+            this.cmbDoktor.FormattingEnabled = true;
+            this.cmbDoktor.Location = new System.Drawing.Point(160, 191);
+            this.cmbDoktor.Name = "cmbDoktor";
+            this.cmbDoktor.Size = new System.Drawing.Size(100, 31);
+            this.cmbDoktor.TabIndex = 32;
+            // 
+            // cmbPoliklinik
+            // 
+            this.cmbPoliklinik.FormattingEnabled = true;
+            this.cmbPoliklinik.Location = new System.Drawing.Point(160, 150);
+            this.cmbPoliklinik.Name = "cmbPoliklinik";
+            this.cmbPoliklinik.Size = new System.Drawing.Size(100, 31);
+            this.cmbPoliklinik.TabIndex = 31;
+            this.cmbPoliklinik.SelectedIndexChanged += new System.EventHandler(this.cmbPoliklinik_SelectedIndexChanged);
+            // 
+            // mskSaat
+            // 
+            this.mskSaat.Location = new System.Drawing.Point(160, 111);
+            this.mskSaat.Mask = "00:00";
+            this.mskSaat.Name = "mskSaat";
+            this.mskSaat.Size = new System.Drawing.Size(100, 28);
+            this.mskSaat.TabIndex = 30;
+            this.mskSaat.ValidatingType = typeof(System.DateTime);
+            // 
+            // mskTarih
+            // 
+            this.mskTarih.Location = new System.Drawing.Point(160, 70);
+            this.mskTarih.Mask = "00/00/0000";
+            this.mskTarih.Name = "mskTarih";
+            this.mskTarih.Size = new System.Drawing.Size(100, 28);
+            this.mskTarih.TabIndex = 29;
+            this.mskTarih.ValidatingType = typeof(System.DateTime);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(6, 231);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(148, 25);
+            this.label11.TabIndex = 28;
+            this.label11.Text = "TC Kimlik No :";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(67, 191);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(87, 25);
+            this.label9.TabIndex = 26;
+            this.label9.Text = "Doktor :";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label7
             // 
@@ -223,105 +304,27 @@ namespace Hastane_Projesi
             this.label8.Text = "Poliklinik :";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label9
+            // label6
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(67, 191);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 25);
-            this.label9.TabIndex = 26;
-            this.label9.Text = "Doktor :";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(110, 31);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 25);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "ID :";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label11
+            // label3
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(6, 231);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(148, 25);
-            this.label11.TabIndex = 28;
-            this.label11.Text = "TC Kimlik No :";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // mskTarih
-            // 
-            this.mskTarih.Location = new System.Drawing.Point(160, 70);
-            this.mskTarih.Mask = "00/00/0000";
-            this.mskTarih.Name = "mskTarih";
-            this.mskTarih.Size = new System.Drawing.Size(100, 28);
-            this.mskTarih.TabIndex = 29;
-            this.mskTarih.ValidatingType = typeof(System.DateTime);
-            // 
-            // mskSaat
-            // 
-            this.mskSaat.Location = new System.Drawing.Point(160, 111);
-            this.mskSaat.Mask = "00:00";
-            this.mskSaat.Name = "mskSaat";
-            this.mskSaat.Size = new System.Drawing.Size(100, 28);
-            this.mskSaat.TabIndex = 30;
-            this.mskSaat.ValidatingType = typeof(System.DateTime);
-            // 
-            // cmbPoliklinik
-            // 
-            this.cmbPoliklinik.FormattingEnabled = true;
-            this.cmbPoliklinik.Location = new System.Drawing.Point(160, 150);
-            this.cmbPoliklinik.Name = "cmbPoliklinik";
-            this.cmbPoliklinik.Size = new System.Drawing.Size(100, 31);
-            this.cmbPoliklinik.TabIndex = 31;
-            // 
-            // cmbDoktor
-            // 
-            this.cmbDoktor.FormattingEnabled = true;
-            this.cmbDoktor.Location = new System.Drawing.Point(160, 191);
-            this.cmbDoktor.Name = "cmbDoktor";
-            this.cmbDoktor.Size = new System.Drawing.Size(100, 31);
-            this.cmbDoktor.TabIndex = 32;
-            // 
-            // mskTc
-            // 
-            this.mskTc.Location = new System.Drawing.Point(160, 228);
-            this.mskTc.Mask = "00000000000";
-            this.mskTc.Name = "mskTc";
-            this.mskTc.Size = new System.Drawing.Size(100, 28);
-            this.mskTc.TabIndex = 33;
-            this.mskTc.ValidatingType = typeof(int);
-            // 
-            // chkDurum
-            // 
-            this.chkDurum.AutoSize = true;
-            this.chkDurum.Location = new System.Drawing.Point(160, 278);
-            this.chkDurum.Name = "chkDurum";
-            this.chkDurum.Size = new System.Drawing.Size(84, 27);
-            this.chkDurum.TabIndex = 34;
-            this.chkDurum.Text = "Durum";
-            this.chkDurum.UseVisualStyleBackColor = true;
-            // 
-            // btnKaydet
-            // 
-            this.btnKaydet.Location = new System.Drawing.Point(149, 309);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(137, 36);
-            this.btnKaydet.TabIndex = 5;
-            this.btnKaydet.Text = "Kaydet";
-            this.btnKaydet.UseVisualStyleBackColor = true;
-            // 
-            // btnGuncelle
-            // 
-            this.btnGuncelle.Location = new System.Drawing.Point(6, 309);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(137, 36);
-            this.btnGuncelle.TabIndex = 4;
-            this.btnGuncelle.Text = "Güncelle";
-            this.btnGuncelle.UseVisualStyleBackColor = true;
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(160, 31);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(100, 28);
-            this.txtId.TabIndex = 35;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(81, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 25);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Tarih :";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // groupBox1
             // 
@@ -333,6 +336,17 @@ namespace Hastane_Projesi
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Branşlar";
             // 
+            // dgvBrans
+            // 
+            this.dgvBrans.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvBrans.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBrans.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvBrans.Location = new System.Drawing.Point(3, 19);
+            this.dgvBrans.Name = "dgvBrans";
+            this.dgvBrans.RowTemplate.Height = 25;
+            this.dgvBrans.Size = new System.Drawing.Size(362, 157);
+            this.dgvBrans.TabIndex = 0;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvDoktor);
@@ -343,18 +357,9 @@ namespace Hastane_Projesi
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Doktorlar";
             // 
-            // dgvBrans
-            // 
-            this.dgvBrans.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBrans.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvBrans.Location = new System.Drawing.Point(3, 19);
-            this.dgvBrans.Name = "dgvBrans";
-            this.dgvBrans.RowTemplate.Height = 25;
-            this.dgvBrans.Size = new System.Drawing.Size(362, 157);
-            this.dgvBrans.TabIndex = 0;
-            // 
             // dgvDoktor
             // 
+            this.dgvDoktor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDoktor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDoktor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDoktor.Location = new System.Drawing.Point(3, 19);
@@ -376,6 +381,15 @@ namespace Hastane_Projesi
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Hızlı Erişim";
             // 
+            // btnBransPaneli
+            // 
+            this.btnBransPaneli.Location = new System.Drawing.Point(160, 56);
+            this.btnBransPaneli.Name = "btnBransPaneli";
+            this.btnBransPaneli.Size = new System.Drawing.Size(137, 29);
+            this.btnBransPaneli.TabIndex = 38;
+            this.btnBransPaneli.Text = "Branş Paneli";
+            this.btnBransPaneli.UseVisualStyleBackColor = true;
+            // 
             // btnRandevuListele
             // 
             this.btnRandevuListele.Location = new System.Drawing.Point(160, 27);
@@ -393,15 +407,7 @@ namespace Hastane_Projesi
             this.btnDokPaneli.TabIndex = 36;
             this.btnDokPaneli.Text = "Doktor Paneli";
             this.btnDokPaneli.UseVisualStyleBackColor = true;
-            // 
-            // btnBransPaneli
-            // 
-            this.btnBransPaneli.Location = new System.Drawing.Point(160, 56);
-            this.btnBransPaneli.Name = "btnBransPaneli";
-            this.btnBransPaneli.Size = new System.Drawing.Size(137, 29);
-            this.btnBransPaneli.TabIndex = 38;
-            this.btnBransPaneli.Text = "Branş Paneli";
-            this.btnBransPaneli.UseVisualStyleBackColor = true;
+            this.btnDokPaneli.Click += new System.EventHandler(this.btnDokPaneli_Click);
             // 
             // SekreterDetay
             // 
@@ -417,14 +423,15 @@ namespace Hastane_Projesi
             this.Controls.Add(this.grpRandevu);
             this.Name = "SekreterDetay";
             this.Text = "SekreterDetay";
+            this.Load += new System.EventHandler(this.SekreterDetay_Load);
             this.grpSekreterBilgi.ResumeLayout(false);
             this.grpSekreterBilgi.PerformLayout();
             this.grpRandevuDetay.ResumeLayout(false);
             this.grpRandevu.ResumeLayout(false);
             this.grpRandevu.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBrans)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoktor)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);

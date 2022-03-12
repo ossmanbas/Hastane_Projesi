@@ -51,7 +51,7 @@ namespace Hastane_Projesi
             this.txtAd.Location = new System.Drawing.Point(171, 24);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(91, 23);
-            this.txtAd.TabIndex = 32;
+            this.txtAd.TabIndex = 1;
             // 
             // label2
             // 
@@ -68,7 +68,7 @@ namespace Hastane_Projesi
             this.txtSoyad.Location = new System.Drawing.Point(171, 64);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(91, 23);
-            this.txtSoyad.TabIndex = 30;
+            this.txtSoyad.TabIndex = 2;
             // 
             // label1
             // 
@@ -86,7 +86,7 @@ namespace Hastane_Projesi
             this.mskTC.Mask = "00000000000";
             this.mskTC.Name = "mskTC";
             this.mskTC.Size = new System.Drawing.Size(91, 23);
-            this.mskTC.TabIndex = 28;
+            this.mskTC.TabIndex = 3;
             this.mskTC.ValidatingType = typeof(int);
             // 
             // label5
@@ -116,7 +116,7 @@ namespace Hastane_Projesi
             this.cmbBrans.Location = new System.Drawing.Point(171, 142);
             this.cmbBrans.Name = "cmbBrans";
             this.cmbBrans.Size = new System.Drawing.Size(91, 23);
-            this.cmbBrans.TabIndex = 35;
+            this.cmbBrans.TabIndex = 4;
             // 
             // label3
             // 
@@ -134,7 +134,7 @@ namespace Hastane_Projesi
             this.txtSifre.Location = new System.Drawing.Point(171, 178);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(91, 23);
-            this.txtSifre.TabIndex = 37;
+            this.txtSifre.TabIndex = 5;
             // 
             // dataGridView1
             // 
@@ -142,26 +142,28 @@ namespace Hastane_Projesi
             this.dataGridView1.Location = new System.Drawing.Point(305, 24);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(427, 177);
-            this.dataGridView1.TabIndex = 38;
+            this.dataGridView1.Size = new System.Drawing.Size(737, 177);
+            this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnEkle
             // 
             this.btnEkle.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnEkle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEkle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEkle.Location = new System.Drawing.Point(90, 219);
+            this.btnEkle.Location = new System.Drawing.Point(69, 220);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(75, 23);
             this.btnEkle.TabIndex = 39;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // btnSil
             // 
             this.btnSil.BackColor = System.Drawing.Color.IndianRed;
             this.btnSil.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSil.Location = new System.Drawing.Point(187, 219);
+            this.btnSil.Location = new System.Drawing.Point(150, 220);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(75, 23);
             this.btnSil.TabIndex = 40;
@@ -172,7 +174,7 @@ namespace Hastane_Projesi
             // 
             this.btnGuncelle.BackColor = System.Drawing.Color.RosyBrown;
             this.btnGuncelle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnGuncelle.Location = new System.Drawing.Point(305, 219);
+            this.btnGuncelle.Location = new System.Drawing.Point(231, 220);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(75, 23);
             this.btnGuncelle.TabIndex = 41;
@@ -183,7 +185,7 @@ namespace Hastane_Projesi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 272);
+            this.ClientSize = new System.Drawing.Size(1054, 272);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnEkle);
@@ -200,6 +202,7 @@ namespace Hastane_Projesi
             this.Controls.Add(this.label5);
             this.Name = "SekreterDoktorPaneli";
             this.Text = "SekreterDoktorPaneli";
+            this.Load += new System.EventHandler(this.SekreterDoktorPaneli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
