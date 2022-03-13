@@ -63,8 +63,8 @@ namespace Hastane_Projesi
             SqlCommand komut2 = new SqlCommand("insert into tbl_randevular (RandevuTarih,RandevuSaat,Randevubrans,RandevuDoktor) values (@r1,@r2,@r3,@r4)", bgl.baglanti());
             komut2.Parameters.AddWithValue("@r1", mskTarih.Text);
             komut2.Parameters.AddWithValue("@r2", mskSaat.Text);
-            komut2.Parameters.AddWithValue("@r3", cmbPoliklinik);
-            komut2.Parameters.AddWithValue("@r4", cmbDoktor);
+            komut2.Parameters.AddWithValue("@r3", cmbPoliklinik.Text);
+            komut2.Parameters.AddWithValue("@r4", cmbDoktor.Text);
             komut2.ExecuteNonQuery();
             bgl.baglanti().Close();
             MessageBox.Show("Randevu Oluşturuldu !");

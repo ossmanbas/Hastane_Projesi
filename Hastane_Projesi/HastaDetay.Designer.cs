@@ -144,6 +144,7 @@ namespace Hastane_Projesi
             // 
             // txtId
             // 
+            this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(115, 42);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(160, 29);
@@ -187,6 +188,7 @@ namespace Hastane_Projesi
             this.btnRandevu.TabIndex = 16;
             this.btnRandevu.Text = "Randevu Al";
             this.btnRandevu.UseVisualStyleBackColor = true;
+            this.btnRandevu.Click += new System.EventHandler(this.btnRandevu_Click);
             // 
             // rchSikayet
             // 
@@ -266,6 +268,7 @@ namespace Hastane_Projesi
             this.dgvAktif.RowTemplate.Height = 25;
             this.dgvAktif.Size = new System.Drawing.Size(563, 174);
             this.dgvAktif.TabIndex = 0;
+            this.dgvAktif.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAktif_CellClick);
             // 
             // HastaDetay
             // 

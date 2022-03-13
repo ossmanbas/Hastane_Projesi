@@ -66,7 +66,7 @@ namespace Hastane_Projesi
         private void cmbDoktor_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable Dt = new();
-            SqlDataAdapter da = new SqlDataAdapter("Select * From Tbl_Randevular Where RandevuBrans='"+cmbBrans.Text+"'",bgl.baglanti());
+            SqlDataAdapter da = new SqlDataAdapter("Select * From Tbl_Randevular Where RandevuBrans='"+cmbBrans.Text+"' and RandevuDurum=0",bgl.baglanti());
             da.Fill(Dt);
             dgvAktif.DataSource = Dt;
         }
@@ -77,6 +77,23 @@ namespace Hastane_Projesi
             bd.tcNo = lblTC.Text;
             bd.Show();
             
+        }
+
+        private void dgvAktif_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilen = dgvAktif.SelectedCells[0].RowIndex;
+            txtId.Text = dgvAktif.Rows[secilen].Cells[0].Value.ToString();
+        }
+
+        private void btnRandevu_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut2 = new SqlCommand("update tbl_randevular set RandevuDurum=1,hastatc=@h1,hastasikayet=@h2 where randevuId=@h3", bgl.baglanti());
+            komut2.Parameters.AddWithValue("@h1", lblTC.Text);
+            komut2.Parameters.AddWithValue("@h2", rchSikayet.Text);
+            komut2.Parameters.AddWithValue("@h3", txtId.Text);
+            komut2.ExecuteNonQuery();
+            bgl.baglanti().Close();
+            MessageBox.Show("Hasta Kaydı Başarıyla Oluşturuldu ! ");
         }
     }
 }

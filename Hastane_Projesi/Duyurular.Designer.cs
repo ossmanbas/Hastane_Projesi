@@ -51,6 +51,7 @@ namespace Hastane_Projesi
             this.Controls.Add(this.dataGridView1);
             this.Name = "Duyurular";
             this.Text = "Duyurular";
+            this.Load += new System.EventHandler(this.Duyurular_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
